@@ -15,7 +15,9 @@ const App = () => {
 
   return (
   <div className="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react-logo"></img>
+    <img src={logo} alt="react-logo"></img>
+    <h1>{name}</h1>
+    <p>{aboutReact(facts)}</p>
     
   </div>
   );
