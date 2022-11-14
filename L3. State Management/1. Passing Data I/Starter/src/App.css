@@ -27,3 +27,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App-entry {
+  list-style: circle;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
