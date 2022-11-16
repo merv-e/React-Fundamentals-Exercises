@@ -1,4 +1,6 @@
 import "./App.css";
+import FavouriteMovies from "./components/movies/FavouriteMovies";
+import Users from "./components/users/Users";
 import logo from "./logo.svg";
 
 // Display a list of movies where each movie contains a list of users that favorited it.
@@ -94,6 +96,7 @@ const movies = {
 };
 
 const App = () => {
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -101,6 +104,9 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>How Popular is Your Favorite Movie?</h2>
+      <FavouriteMovies profiles={profiles} movies={movies} /> 
+      {/* [, users, movies] */}
+      <Users profiles={profiles} users={users} movies={movies}/>
     </div>
   );
 };
