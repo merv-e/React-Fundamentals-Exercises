@@ -1,6 +1,7 @@
 import corgi from "./corgi.jpg";
 import "./App.css";
 import { useState } from "react";
+import Button from 'react-bootstrap/Button'; 
 
 const App = () => {
   // const [] = useState();
@@ -16,7 +17,7 @@ const App = () => {
       <h2>Like this photo!</h2>
       <img src={corgi} alt="Corgi"></img>
       <p>Amount of likes: </p>
-      <button className="btn btn-block btn-primary" onClick={numberOfLikes}>{likes}</button>
+      <Button className="btn btn-primary" onClick={numberOfLikes}>Likes {likes}</Button>
     </div>
   );
 };
