@@ -26,6 +26,7 @@ const App = () => {
       </header>
       <h2>Shopping List</h2>
       <CreateNewItem onAddItem={handleAddItem} />
+      
       <DeleteLastItem
         onDeleteLastItem={handleDeleteLastItem}
         buttonDisabled={noItemsFound()}

@@ -1,16 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
-import DeleteItem from '../DeleteItem';
-import ListItems from '../ListItems';
 
-const Form = () => {
+const AddItem = ({addItem}) => {
     
     const [value, setValue] = useState("");
-    const [items, setItems] = useState([]);
 
     const add = (event) => {
           event.preventDefault();
-          setItems([...items, value]);
+          addItem(value);
           setValue("");
         };
         
@@ -30,12 +27,10 @@ const Form = () => {
             onChange={handleChange}
           />
           <button disabled={inputIsEmpty()}>Add</button>
-          <DeleteItem items={items} setItems={setItems} />
-          <ListItems items={items} />
       </form>
     </div>
   )
 }
 
-export default Form
+export default AddItem
 
