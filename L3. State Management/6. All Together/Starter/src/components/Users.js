@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 
 const Users = () => {
 
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [userName, setUserName] = useState("");
+
     const handleForm = (event) => {
         event.preventDefault();
     };
