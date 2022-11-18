@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types"
 
 const ListItems = ({items}) => {
   return (
@@ -11,6 +12,10 @@ const ListItems = ({items}) => {
       </ol>
     </div>
   )
+}
+
+ListItems.propTypes = {
+    items: PropTypes.array.isRequired
 }
 
 export default ListItems

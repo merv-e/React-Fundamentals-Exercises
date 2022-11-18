@@ -8,16 +8,16 @@ import ListItems from "./components/ListItems"
 const App = () => {
 
   const [items, setItems] = useState([]);
-
-  const noItemsFound = () => items.length === 0;
-
-  const deleteLastItem = (event) => {
-     setItems(items.slice(0, -1));
-  };
-
+  
   const addItem = (item) => {
     setItems([...items, item]);
   };
+  
+  const deleteLastItem = (event) => {
+    setItems(items.slice(0, -1));
+  };
+  
+  const noItemsFound = () => items.length === 0;
 
   return (
     <div className="App">
@@ -26,8 +26,9 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>Shopping List</h2>
-      <AddItem addItem = {addItem}  />
-      <DeleteItem deleteItem = {deleteLastItem} disabled= {noItemsFound} />
+      <AddItem addItem={addItem}  />
+      <DeleteItem 
+        deleteItem = {deleteLastItem} disabled= {noItemsFound} />
       <ListItems items={items}/>
     </div>
   );
