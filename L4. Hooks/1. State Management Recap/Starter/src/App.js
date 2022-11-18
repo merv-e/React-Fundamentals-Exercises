@@ -21,11 +21,12 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
+
       <div className="container">
         <div className="chat-window">
           <h2>Super Awesome Chat</h2>
-          <div className="name sender">{users[0].username}</div>
 
+          <div className="name sender">{users[0].username}</div>
           <ul className="message-list">
             {messages.map((message, index) => (
               <li
