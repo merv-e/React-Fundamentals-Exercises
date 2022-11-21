@@ -1,23 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import AmyChatWindow from "./components/AmyChatWindow";
-import JohnChatWindow from "./components/JohnChatWindow";
-// import EnterMessageUser0 from "./components/EnterMessageAmy";
-// import EnterMessageUser1 from "./components/EnterMessageJohn";
-
-const users = [{ username: "Amy" }, { username: "John" }];
-
-const messages = [
-  { username: "Amy", text: "Hi, Jon!" },
-  { username: "Amy", text: "How are you?" },
-  { username: "John", text: "Hi, Amy! Good, you?" },
-];
+import ChatWindow from "./components/ChatWindow";
 
 const App = () => {
-  // If the user did not type anything, he/she should not be allowed to submit.
-  const isDisabled = () => {
-    return false;
-  };
 
   return (
     <div className="App">
@@ -27,8 +12,7 @@ const App = () => {
       </header>
 
       <div className="container">
-        <AmyChatWindow messages={messages} users={users} isDisabled={isDisabled}/>
-        <JohnChatWindow messages={messages} users={users} isDisabled={isDisabled}/>
+        <ChatWindow />
       </div>    
     </div>
   );

@@ -11,6 +11,7 @@ will be passed from the App Component all the way down to the AddMessage Compone
 */
 
 const ChatWindow = ({ user, messages, onMessage }) => {
+  
   const handleOnMessage = (message) => {
     onMessage(user.username, message);
   };

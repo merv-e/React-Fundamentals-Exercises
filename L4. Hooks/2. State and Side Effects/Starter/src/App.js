@@ -1,12 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import GenerateNumbers from "./components/GenerateNumbers";
 
-const value1 = Math.floor(Math.random() * 100);
-const value2 = Math.floor(Math.random() * 100);
-const value3 = Math.floor(Math.random() * 100);
-const proposedAnswer = Math.floor(Math.random() * 3) + value1 + value2 + value3;
-const numQuestions = 0;
-const numCorrect = 0;
 
 const App = () => {
   return (
@@ -16,15 +11,8 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <div className="game">
-        <h2>Mental Math</h2>
-        <div className="equation">
-          <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
-        </div>
-        <button>True</button>
-        <button>False</button>
-        <p className="text">
-          Your Score: {numCorrect}/{numQuestions}
-        </p>
+        <h2>Mental Math</h2> 
+      <GenerateNumbers />
       </div>
     </div>
   );
