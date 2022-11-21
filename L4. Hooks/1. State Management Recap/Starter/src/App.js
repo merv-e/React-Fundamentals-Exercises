@@ -1,5 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
+import AmyChatWindow from "./components/AmyChatWindow";
+import JohnChatWindow from "./components/JohnChatWindow";
+// import EnterMessageUser0 from "./components/EnterMessageAmy";
+// import EnterMessageUser1 from "./components/EnterMessageJohn";
 
 const users = [{ username: "Amy" }, { username: "John" }];
 
@@ -23,75 +27,9 @@ const App = () => {
       </header>
 
       <div className="container">
-        <div className="chat-window">
-          <h2>Super Awesome Chat</h2>
-
-          <div className="name sender">{users[0].username}</div>
-          <ul className="message-list">
-            {messages.map((message, index) => (
-              <li
-                key={index}
-                className={
-                  message.username === users[0].username
-                    ? "message sender"
-                    : "message recipient"
-                }
-              >
-                <p>{`${message.username}: ${message.text}`}</p>
-              </li>
-            ))}
-          </ul>
-
-          <div>
-            <form className="input-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter your message..."
-              />
-              <div className="input-group-append">
-                <button className="btn submit-button" disabled={isDisabled()}>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div className="chat-window">
-          <h2>Super Awesome Chat</h2>
-          <div className="name sender">{users[1].username}</div>
-          <ul className="message-list">
-            {messages.map((message, index) => (
-              <li
-                key={index}
-                className={
-                  message.username === users[1].username
-                    ? "message sender"
-                    : "message recipient"
-                }
-              >
-                <p>{`${message.username}: ${message.text}`}</p>
-              </li>
-            ))}
-          </ul>
-
-          <div>
-            <form className="input-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter your message..."
-              />
-              <div className="input-group-append">
-                <button className="btn submit-button" disabled={isDisabled()}>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+        <AmyChatWindow messages={messages} users={users} isDisabled={isDisabled}/>
+        <JohnChatWindow messages={messages} users={users} isDisabled={isDisabled}/>
+      </div>    
     </div>
   );
 };
